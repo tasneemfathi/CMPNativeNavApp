@@ -78,18 +78,14 @@ fun MainScreen(parentNavController: NavController) {
                 HomeDetailsScreen()
             }
             composable(BottomNavItem.Profile.route) {
-
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Text("Profile Screen")
                     }
-
             }
             composable(BottomNavItem.Settings.route) {
-
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Text("Settings Screen")
                     }
-
             }
         }
     }

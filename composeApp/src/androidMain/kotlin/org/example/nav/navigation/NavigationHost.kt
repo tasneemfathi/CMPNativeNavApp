@@ -1,5 +1,6 @@
 package org.example.nav.navigation
 
+import android.util.Log
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -22,20 +23,21 @@ fun NavigationHost() {
     val navController = rememberNavController()
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
-
+    Log.d("NavigationHost", "Current route: $currentRoute")
+    Log.d("NavigationHost", "${Splash}")
     Scaffold(
         topBar = {
-            when {
-                backStackEntry?.toRouteOrNull<Splash>() != null -> {
+            when(currentRoute) {
+                "org.example.nav.navigation.Splash" -> {
                     // Hide app bar
                 }
-                backStackEntry?.toRouteOrNull<Welcome>() != null -> {
+                "org.example.nav.navigation.Welcome" -> {
                     TopAppBar(title = { Text("Welcome") })
                 }
-                backStackEntry?.toRouteOrNull<Main>() != null -> {
+                "org.example.nav.navigation.Main"-> {
                     TopAppBar(title = { Text("Main") })
                 }
-                backStackEntry?.toRouteOrNull<HomeDetails>() != null -> {
+                "org.example.nav.navigation.HomeDetails" -> {
                     TopAppBar(
                         title = { Text("Details") },
                         navigationIcon = {
@@ -68,11 +70,11 @@ fun NavigationHost() {
 
 }
 
-
-inline fun <reified T> NavBackStackEntry?.toRouteOrNull(): T? {
-    return try {
-        this?.toRoute<T>()
-    } catch (_: Exception) {
-        null
-    }
-}
+//
+//inline fun <reified T> NavBackStackEntry?.toRouteOrNull(): T? {
+//    return try {
+//        this?.toRoute<T>()
+//    } catch (_: Exception) {
+//        null
+//    }
+//}

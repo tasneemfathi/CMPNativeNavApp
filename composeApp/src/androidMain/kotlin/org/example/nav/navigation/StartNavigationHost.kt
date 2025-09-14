@@ -17,12 +17,9 @@ fun NavGraphBuilder.StartNavigationHost(navController: NavHostController) {
     composable<Welcome>{
         WelcomeScreen(goToHome = navController:: goToHome)
     }
-
     composable<Main>{
         MainScreen(parentNavController = navController)
     }
-
-
 
 }
 

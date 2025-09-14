@@ -32,18 +32,18 @@ struct AppScreenContainer<Content:View>: View {
                         .modifier(BoldLargeText())
                         .foregroundColor(.text)
                 }
-            if appCoordinator.canPopBack() {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        appCoordinator.pop()
-                    } label: {
-                        Image(systemName: "arrow.left")
-                            .foregroundColor(.text)
-                    }
-                }
-            }
+//            if appCoordinator.canPopBack() {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//                        appCoordinator.pop()
+//                    } label: {
+//                        Image(systemName: "arrow.left")
+//                            .foregroundColor(.text)
+//                    }
+//                }
+//            }
         }
-        .navigationBarBackButtonHidden(true)
+      //  .navigationBarBackButtonHidden(true)
 
 
 
