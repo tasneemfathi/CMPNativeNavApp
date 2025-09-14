@@ -16,6 +16,7 @@ struct MainScreen: View {
     init() {
         self._homeAppCoordinator = StateObject(wrappedValue:  AppCoordinatorImpl())
     }
+    
     var body: some View {
         TabView {
             // First Tab

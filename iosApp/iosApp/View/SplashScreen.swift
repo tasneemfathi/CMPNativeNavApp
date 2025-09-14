@@ -13,7 +13,6 @@ struct SplashScreen: View {
     var body: some View {
         ComposeSplashView(goToWelcome: {
             appCoordinator.showingSplash = false
-          //  appCoordinator.push(.mainPath(.welcome))
         })
     }
 }
@@ -21,7 +20,6 @@ struct SplashScreen: View {
 #Preview {
     SplashScreen()
 }
-
 
 
 struct ComposeSplashView: UIViewControllerRepresentable {

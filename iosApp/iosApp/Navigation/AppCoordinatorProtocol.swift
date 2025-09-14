@@ -24,5 +24,5 @@ protocol AppCoordinatorProtocol: ObservableObject {
     func pop()
     func popToRoot()
     func dismissSheet()
-    func dismissFullScreenOver()
+    func dismissFullScreenCover()
 }

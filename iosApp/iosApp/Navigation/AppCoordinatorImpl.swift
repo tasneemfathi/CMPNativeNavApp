@@ -40,7 +40,7 @@ class AppCoordinatorImpl: AppCoordinatorProtocol {
      }
      func popToRoot() { path.removeLast(path.count) }
      func dismissSheet() { sheet = nil }
-     func dismissFullScreenOver() { fullScreenCover = nil }
+     func dismissFullScreenCover() { fullScreenCover = nil }
   
      func dismissRoot() {
          dismiss = true
